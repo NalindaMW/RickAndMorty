@@ -22,7 +22,8 @@ final class RMRequest {
     
     /// Query parameters for API, if any
     private let queryParameters: [URLQueryItem]
-
+    
+    /// Constructed url for the API request in string format
     private var urlString: String {
         var string = Constants.baseUrl
         string += endpoint.rawValue

@@ -81,9 +81,9 @@ extension RMCharacterListView: RMCharacterListViewViewModelDelegate {
     }
     
     func didLoadInitialCharacters() {
-        self.collectionView.reloadData()
-        self.spinner.stopAnimating()
-        self.collectionView.isHidden = false
+        spinner.stopAnimating()
+        collectionView.isHidden = false
+        collectionView.reloadData()
         
         UIView.animate(withDuration: 0.4) {
             self.collectionView.alpha = 1

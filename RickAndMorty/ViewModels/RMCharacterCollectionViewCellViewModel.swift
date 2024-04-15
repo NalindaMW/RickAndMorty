@@ -29,6 +29,7 @@ final class RMCharacterCollectionViewCellViewModel {
         return "Status: \(characterStatus.text)"
     }
     
+    // TODO: Abstract to image manager
     public func fetchImage(completion: @escaping (Result<Data, Error>) -> Void) {
         guard let url = characterImageUrl else {
             completion(.failure(URLError(.badURL)))
